@@ -1,0 +1,283 @@
+/*
+    #007bff
+    #6c757d
+    #28a745
+    #dc3545
+    #ffc107
+    #17a2b8
+    #343a40
+    #f8f9fa
+*/
+:root {
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark: #343a40;
+  --light: #f8f9fa;
+}
+
+/* text color */
+.text-primary {
+  color: var(--primary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-danger {
+  color: var(--danger);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-info {
+  color: var(--info);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-light {
+  color: var(--light);
+}
+
+/* bg-colors  (zemin renkleri)*/
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-danger {
+  background-color: var(--danger);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+
+/* buttons */
+.btn {
+  cursor: pointer; /*buton üzerine gelince el işareti çıksın */
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.btn-secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.btn-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+.btn-warning {
+  color: var(--white);
+  background-color: var(--warning);
+}
+.btn-dark {
+  color: var(--white);
+  background-color: var(--dark);
+}
+.btn-info {
+  color: var(--white);
+  background-color: var(--info);
+}
+.btn-light {
+  color: var(--white);
+  background-color: var(--light);
+}
+.btn-outline-primary {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+.btn-outline-warning {
+  background: var(--white);
+  border: 1px solid var(--warning);
+  color: #ddd;
+}
+.btn-outline-warning:hover {
+  background: var(--warning);
+  border: 1px solid var(--warning);
+  color: var(--white);
+}
+
+/* flex items */
+
+.flex-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.flex-items > div {
+  padding: 20px;
+  flex-basis: 100%;
+}
+
+/* #about .row  kolonlar sıralar buraya yazılır*/
+
+#about .row .column {
+  display: flex;
+}
+
+#about .row .column .column-1 img {
+  height: 100%;
+}
+
+#about.article .column:nth-child(odd) {
+  /* odd=tekli resimler 1.resim veya 3.resim gibi */
+  flex: 40%;
+}
+#about.article .column:nth-child(even) {
+  /* even=çiftli resimler 2.resim veya 4.resim gibi */
+  flex: 60%;
+}
+
+#about .row .column .column-2 {
+  width: 100%;
+}
+
+#about .row .column .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 30px;
+}
+#about h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#about p {
+  margin: 20px 0;
+}
+
+.flex_reverse .column {
+  flex-direction: row-reverse;
+}
+
+/* flex grid */
+
+.flex-grid .row {
+  display: flex;
+  padding: 0 0.4rem;
+  flex-wrap: wrap;
+}
+
+.flex-grid .row .column {
+  flex: 25%;
+  padding: 0 0.4rem;
+}
+
+/* section-header */
+
+.section_header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.section_header h2 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.section-padding {
+  padding: 4rem 4rem 2rem;
+}
+
+/* rooms */
+
+.rooms .flex-items .card img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* teams */
+.teams img {
+  border-radius: 50%;
+}
+.teams img:hover {
+  opacity: 0.7;
+}
+
+.manager-card {
+  margin: 1px;
+}
+
+/* contact */
+.flex-contact .row .column {
+  display: flex;
+  flex-direction: row;
+}
+.flex-contact .row .column img {
+  height: 100%;
+}
+.flex-contact .column-1 {
+  flex: 50%;
+}
+.flex-contact .column-2 {
+  flex: 50%;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .flex-items {
+    flex-direction: column;
+  }
+  .teams img {
+    width: 70%;
+  }
+  #about .row .column {
+    flex-direction: column;
+    display: flex;
+    flex: 100% !important;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .flex-grid .row .column {
+    flex: 50%;
+  }
+}
