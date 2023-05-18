@@ -1,1 +1,1 @@
-# deluxe-hotel-proje
+# deluxe-hotel-/proje
