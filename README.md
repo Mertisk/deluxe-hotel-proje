@@ -1,3 +1,0 @@
-# deluxe-hotel-/proje
-
-dzfdvdvbzdz
